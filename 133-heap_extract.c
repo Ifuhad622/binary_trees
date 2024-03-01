@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include <stdlib.h>
 
 /**
  * tree_height - measures the height of a binary tree
@@ -105,12 +106,10 @@ void heapify(heap_t *root)
 }
 
 /**
- * heap_extract - extracts the root node of a Max Binary Heap
- * @root: a double pointer to the root node of heap
- *
- * Return: the value stored in the root node
- *         0 on failure
- */
+ * heap_extract - extracts the root node from a Max Binary Heap
+ * @root: pointer to the heap root
+ * Return: value of extracted node
+ **/
 int heap_extract(heap_t **root)
 {
 	int value;
@@ -139,3 +138,4 @@ int heap_extract(heap_t **root)
 	*root = heap_r;
 	return (value);
 }
+
